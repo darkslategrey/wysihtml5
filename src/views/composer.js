@@ -133,7 +133,7 @@
       var that = this;
 
       this.doc                = this.sandbox.getDocument();
-      this.element            = this.doc.body;
+      this.element            = this.doc.getElementsByTagName('div')[0];
       this.textarea           = this.parent.textarea;
       this.element.innerHTML  = this.textarea.getValue(true);
 

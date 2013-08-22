@@ -31,7 +31,8 @@ if (wysihtml5.browser.supported()) {
     },
 
     getComposerElement: function() {
-      return this.getIframeElement().contentWindow.document.body;
+      var doc = this.getIframeElement().contentWindow.document;
+      return doc.getElementsByTagName('div')[0];
     },
 
     getIframeElement: function() {
