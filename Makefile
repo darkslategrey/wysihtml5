@@ -8,8 +8,8 @@ JS_FILES = src/wysihtml5.js \
   lib/rangy/rangy-core.js \
   lib/base/base.js \
   src/browser.js \
+  src/dispatcher.js \
   src/lang/array.js \
-  src/lang/dispatcher.js \
   src/lang/object.js \
   src/lang/string.js \
   src/dom/auto_link.js \

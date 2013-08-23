@@ -1,5 +1,5 @@
-wysihtml5.lang.Dispatcher = Base.extend(
-  /** @scope wysihtml5.lang.Dialog.prototype */ {
+wysihtml5.Dispatcher = Base.extend(
+  /** @scope wysihtml5.Dispatcher.prototype */ {
   on: function(eventName, handler) {
     this.events = this.events || {};
     this.events[eventName] = this.events[eventName] || [];
@@ -27,7 +27,7 @@ wysihtml5.lang.Dispatcher = Base.extend(
     }
     return this;
   },
-  
+
   fire: function(eventName, payload) {
     this.events = this.events || {};
     var handlers = this.events[eventName] || [],
@@ -36,15 +36,5 @@ wysihtml5.lang.Dispatcher = Base.extend(
       handlers[i].call(this, payload);
     }
     return this;
-  },
-  
-  // deprecated, use .on()
-  observe: function() {
-    return this.on.apply(this, arguments);
-  },
-  
-  // deprecated, use .off()
-  stopObserving: function() {
-    return this.off.apply(this, arguments);
   }
 });
